@@ -112,6 +112,20 @@ class UNSpider:
 
         return str(r.content, encoding="utf-8")
 
+    def download(self, doc_link):
+
+        headers = {
+            "Host": "documents-dds-ny.un.org",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "none",
+            "Sec-Fetch-User": "?1",
+            "Upgrade-Insecure-Requests": "1",
+        }
+
+        r = self.session.get(doc_link, headers=headers, verify=False)
+        return r
+
 
 if __name__ == "__main__":
     s = UNSpider()
