@@ -25,3 +25,10 @@ fp = s.init_search("non-intervention") # 初始化搜索，如果成功的话返
 
 p3 = s.get_search_page(3) # 获得第三页搜索结果 的 html
 ```
+
+## 文档分析
+
+查看 analyzer.py 看详情，可修改分析目录
+```
+python analyzer.py
+```
