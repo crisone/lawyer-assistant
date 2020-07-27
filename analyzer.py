@@ -109,6 +109,8 @@ def make_report(pdf_folder, keyword, country_file):
                 f.write(t)
                 f.write("\n")
 
+    f.close()
+
 
 if __name__ == "__main__":
 
